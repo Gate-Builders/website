@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<groups>
+  <group id="alpha-fox" category="Gate Network">
+    <name>Alpha-Fox - Alteran Stargate Network</name>
+    <shortDescription>Industry-leading Stargate creators founded in 2007.</shortDescription>
+    <longDescription><p>Step into the universe of Alpha-Fox, your premier destination for cutting edge virtual services in Second Life. At the heart of our offerings is the Alteran Stargate Network (ASN), an advanced teleportation system connecting adventurers to countless destinations across the grid. Whether you're dialing up a Stargate to explore distant sims or integrating our robust APIs, we're here to elevate your Second Life experience with reliable, innovative tools.</p>
+    <p>Our dedicated team works tirelessly behind the scenes, refining systems to ensure seamless journeys because no one enjoys a gate stuck on the fritz! From swiftly handling server hiccups to rolling out exciting new updates, we're committed to keeping your adventures uninterrupted. But Alpha-Fox is more than just technology; it's a thriving community.</p></longDescription>
+    <imageUrl>https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&amp;fit=crop&amp;q=80&amp;w=1000</imageUrl>
+    <logoUrl>https://api.dicebear.com/7.x/shapes/svg?seed=alphafox&amp;backgroundColor=3b82f6</logoUrl>
+    <websiteUrl>https://www.alpha-fox.com/</websiteUrl>
+    <tags>
+      <tag>Prim based Stargates</tag>
+      <tag>Public API</tag>
+      <tag>+400 Active Stargates</tag>
+    </tags>
+  </group>
+  <group id="novum-network" category="Gate Network">
+    <name>Novum Network</name>
+    <shortDescription>A creative collective redefining virtual aesthetics.</shortDescription>
+    <longDescription>Novum Network brings together visionaries from across the digital landscape to collaborate on experimental design and community-driven projects. They set new standards for virtual identity through visual storytelling and avant-garde design patterns.</longDescription>
+    <imageUrl>https://sgmu.vk-labs.com/sources/othala/othala1.png</imageUrl>
+    <logoUrl>https://stargatenet.work/asgardxyzlogo.png</logoUrl>
+    <websiteUrl>https://stargatenet.work/</websiteUrl>
+    <tags>
+      <tag>Mesh Based Stargates</tag>
+      <tag>Public API</tag>
+      <tag>Early adopters</tag>
+    </tags>
+  </group>
+  <group id="vk-labs" category="Creators">
+    <name>Vk Labs</name>
+    <shortDescription>Advanced interactive systems and modular scripting frameworks.</shortDescription>
+    <longDescription>Vk Labs specializes in the technical layer of virtual existence. They develop sophisticated LSL-based systems that handle complex interactions, modular home automation, and interactive furniture frameworks. Their mission is to provide the logical backbone that makes virtual spaces truly alive and responsive.</longDescription>
+    <imageUrl>https://vk-labs.com/wp-content/uploads/2022/11/Snapshot_002-2048x1095.png</imageUrl>
+    <logoUrl>https://vk-labs.com/wp-content/uploads/2022/11/vklabslogo_simple.png</logoUrl>
+    <websiteUrl>https://vk-labs.com/</websiteUrl>
+    <tags>
+      <tag>LSL Scripting</tag>
+      <tag>Automation</tag>
+      <tag>Systems</tag>
+    </tags>
+  </group>
+  <group id="oslabs" category="Creators">
+    <name>OS Labs</name>
+    <shortDescription>Open-source standard development and protocol optimization.</shortDescription>
+    <longDescription>OS Labs focuses on building universal tools and open protocols for the Stargate network. By fostering collaborative engineering, they aim to create a seamless, interoperable infrastructure that connects disparate virtual regions into a unified ecosystem.</longDescription>
+    <imageUrl>https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&amp;fit=crop&amp;q=80&amp;w=1000</imageUrl>
+    <logoUrl>https://api.dicebear.com/7.x/shapes/svg?seed=oslabs&amp;backgroundColor=3b82f6</logoUrl>
+    <websiteUrl>https://www.oslabs.co.uk/</websiteUrl>
+    <tags>
+      <tag>Open Source</tag>
+      <tag>Protocol</tag>
+      <tag>Engineering</tag>
+    </tags>
+  </group>
+  <group id="sgmu" category="Experiences">
+    <name>SGMU</name>
+    <shortDescription>One sim connecting the Gate networks and fans.</shortDescription>
+    <longDescription>The Stargate Multiverse Project is a collaborative Roleplay initiative on Second Life, dedicated to recreating the awe and wonder of the Stargate franchise within a multi-sim virtual environment. Join us as we step through the event horizon into a galaxy of intrigue, diplomacy, and discovery.</longDescription>
+    <imageUrl>https://sgmu.vk-labs.com/sources/sgc/controlroom2.jpg</imageUrl>
+    <logoUrl>https://sgmu.vk-labs.com/logo.png</logoUrl>
+    <websiteUrl>https://sgmu.vk-labs.com/</websiteUrl>
+    <tags>
+      <tag>Roleplay</tag>
+      <tag>RPG-Light</tag>
+      <tag>Networking</tag>
+    </tags>
+  </group>
+</groups>
