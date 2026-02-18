@@ -11,7 +11,7 @@ const GroupCard: React.FC<GroupCardProps> = ({ group, onClick }) => {
   return (
     <div 
       onClick={() => onClick(group)}
-      className="group relative h-[380px] bg-zinc-900 rounded-[2.5rem] overflow-hidden cursor-pointer transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_20px_60px_rgba(0,0,0,0.7),0_0_20px_rgba(59,130,246,0.3)] border border-zinc-800 hover:border-blue-500/50 isolate"
+      className="group relative h-[380px] bg-zinc-900 rounded-[2.5rem] overflow-hidden cursor-pointer transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_20px_60px_rgba(0,0,0,0.7),0_0_20px_rgba(59,130,246,0.3)] border border-zinc-800 hover:border-blue-500/50 isolate will-change-transform transform-gpu"
     >
       {/* Background Image with Overlay */}
       <div 

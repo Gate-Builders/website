@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <groups>
   <group id="alpha-fox" category="Gate Network">
-    <name>Alpha-Fox - Alteran Stargate Network</name>
-    <shortDescription>Industry-leading Stargate creators founded in 2007.</shortDescription>
-    <longDescription><p>Step into the universe of Alpha-Fox, your premier destination for cutting edge virtual services in Second Life. At the heart of our offerings is the Alteran Stargate Network (ASN), an advanced teleportation system connecting adventurers to countless destinations across the grid. Whether you're dialing up a Stargate to explore distant sims or integrating our robust APIs, we're here to elevate your Second Life experience with reliable, innovative tools.</p>
-    <p>Our dedicated team works tirelessly behind the scenes, refining systems to ensure seamless journeys because no one enjoys a gate stuck on the fritz! From swiftly handling server hiccups to rolling out exciting new updates, we're committed to keeping your adventures uninterrupted. But Alpha-Fox is more than just technology; it's a thriving community.</p></longDescription>
+    <name>Alteran Stargate Network</name>
+    <shortDescription>Your next virtual odyssey awaits - Est. 2007.</shortDescription>
+    <longDescription>The Alteran Stargate Network is a long-running, fan-built Stargate teleportation system. Fully launched in 2008 (with roots going back to 2005), ASN connects hundreds of regions across the grid with fully functional, scripted gates that let residents rez, register, and instantly travel. Owners can also take advantage of its web-based management.</longDescription>
     <imageUrl>./img/asn-hub.jpg</imageUrl>
-    <logoUrl>https://api.dicebear.com/7.x/shapes/svg?seed=alphafox&amp;backgroundColor=3b82f6</logoUrl>
+    <logoUrl>./img/asn-logo.png</logoUrl>
     <websiteUrl>https://www.alpha-fox.com/</websiteUrl>
     <tags>
       <tag>Prim based Stargates</tag>
@@ -46,7 +45,7 @@
     <shortDescription>The OG Stargate creator that inspired a lot.</shortDescription>
     <longDescription>OS Labs was the source of many great products back in Eternal Calm. They provide quality devices and flyable ships. Development has halted but their products are still amongst the favorites.</longDescription>
     <imageUrl>https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&amp;fit=crop&amp;q=80&amp;w=1000</imageUrl>
-    <logoUrl>https://api.dicebear.com/7.x/shapes/svg?seed=oslabs&amp;backgroundColor=3b82f6</logoUrl>
+    <logoUrl>./img/oslabs-banner.png</logoUrl>
     <websiteUrl>https://www.oslabs.co.uk/</websiteUrl>
     <tags>
       <tag>LSL Scripting</tag>
@@ -55,9 +54,9 @@
     </tags>
   </group>
   <group id="sgmu" category="Experiences">
-    <name>SGMU</name>
+    <name>Stargate Multiverse</name>
     <shortDescription>One sim connecting the Gate networks and fans.</shortDescription>
-    <longDescription>The Stargate Multiverse Project is a collaborative Roleplay initiative on Second Life, dedicated to recreating the awe and wonder of the Stargate franchise within a multi-sim virtual environment. Join us as we step through the event horizon into a galaxy of intrigue, diplomacy, and discovery.</longDescription>
+    <longDescription>The Stargate Multiverse Project or SGMU for short, is a collaborative Roleplay initiative on Second Life. Dedicated to recreating the awe and wonder of the Stargate franchise within a multi-sim virtual environment. Join us as we step through the event horizon into a galaxy of intrigue, diplomacy, and discovery.</longDescription>
     <imageUrl>https://sgmu.vk-labs.com/sources/sgc/controlroom2.jpg</imageUrl>
     <logoUrl>https://sgmu.vk-labs.com/logo.png</logoUrl>
     <websiteUrl>https://sgmu.vk-labs.com/</websiteUrl>
