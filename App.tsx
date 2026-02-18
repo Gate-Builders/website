@@ -127,9 +127,9 @@ const App: React.FC = () => {
             </a>
           </div>
           
-          <div className="flex flex-col md:flex-row items-start md:items-stretch gap-8 md:gap-12 lg:gap-16 mt-8">
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-12 lg:gap-16 mt-8">
             {/* Logo square zone */}
-            <div className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 flex items-center justify-center shrink-0">
+            <div className="w-28 h-28 md:w-44 md:h-44 lg:w-52 lg:h-52 flex items-center justify-center shrink-0">
               <img
                 src="/gate-builders-logo.png"
                 alt="Gate Builders Logo"
