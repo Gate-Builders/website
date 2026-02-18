@@ -5,7 +5,7 @@
     <shortDescription>Industry-leading Stargate creators founded in 2007.</shortDescription>
     <longDescription><p>Step into the universe of Alpha-Fox, your premier destination for cutting edge virtual services in Second Life. At the heart of our offerings is the Alteran Stargate Network (ASN), an advanced teleportation system connecting adventurers to countless destinations across the grid. Whether you're dialing up a Stargate to explore distant sims or integrating our robust APIs, we're here to elevate your Second Life experience with reliable, innovative tools.</p>
     <p>Our dedicated team works tirelessly behind the scenes, refining systems to ensure seamless journeys because no one enjoys a gate stuck on the fritz! From swiftly handling server hiccups to rolling out exciting new updates, we're committed to keeping your adventures uninterrupted. But Alpha-Fox is more than just technology; it's a thriving community.</p></longDescription>
-    <imageUrl>https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&amp;fit=crop&amp;q=80&amp;w=1000</imageUrl>
+    <imageUrl>./img/asn-hub.jpg</imageUrl>
     <logoUrl>https://api.dicebear.com/7.x/shapes/svg?seed=alphafox&amp;backgroundColor=3b82f6</logoUrl>
     <websiteUrl>https://www.alpha-fox.com/</websiteUrl>
     <tags>
