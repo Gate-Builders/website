@@ -7,6 +7,7 @@ export interface Group {
   imageUrl: string;
   logoUrl: string;
   websiteUrl: string;
+  videoUrl?: string;
   tags: string[];
   category: 'Gate Network' | 'Creators' | 'Experiences';
 }

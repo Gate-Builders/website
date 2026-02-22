@@ -47,6 +47,7 @@ const App: React.FC = () => {
           imageUrl: safeText(node, 'imageUrl'),
           logoUrl: safeText(node, 'logoUrl'),
           websiteUrl: safeText(node, 'websiteUrl'),
+          videoUrl: safeText(node, 'videoUrl') || undefined,
           tags: Array.from(node.getElementsByTagName('tag')).map(t => t.textContent || '')
         }));
 

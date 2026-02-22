@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { Group } from '../types';
 
 interface GroupCardProps {
@@ -7,20 +7,77 @@ interface GroupCardProps {
   onClick: (group: Group) => void;
 }
 
+// Matches the background image zoom animation duration
+const ZOOM_DURATION_MS = 1000;
+
 const GroupCard: React.FC<GroupCardProps> = ({ group, onClick }) => {
+  const [showVideo, setShowVideo] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleMouseEnter = useCallback(() => {
+    if (!group.videoUrl) return;
+    timerRef.current = setTimeout(() => {
+      setShowVideo(true);
+      videoRef.current?.play().catch(() => { /* autoplay blocked */ });
+    }, ZOOM_DURATION_MS);
+  }, [group.videoUrl]);
+
+  const handleMouseLeave = useCallback(() => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
+    setShowVideo(false);
+    if (videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+    }
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, []);
+
   return (
-    <div 
+    <div
       onClick={() => onClick(group)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       className="group relative h-[380px] bg-zinc-900 rounded-[2.5rem] overflow-hidden cursor-pointer transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_20px_60px_rgba(0,0,0,0.7),0_0_20px_rgba(59,130,246,0.3)] border border-zinc-800 hover:border-blue-500/50 isolate will-change-transform transform-gpu"
     >
-      {/* Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" 
-        style={{ backgroundImage: `url(${group.imageUrl})` }}
+      {/* Background Image – zooms in on hover, fades out when video takes over */}
+      <div
+        className="absolute inset-0 bg-cover bg-center group-hover:scale-110"
+        style={{
+          backgroundImage: `url(${group.imageUrl})`,
+          transition: 'transform 1000ms ease, opacity 500ms ease',
+          opacity: showVideo ? 0 : 1,
+        }}
       />
+
+      {/* Video background – fades in after the zoom animation finishes */}
+      {group.videoUrl && (
+        <video
+          ref={videoRef}
+          src={group.videoUrl}
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{
+            opacity: showVideo ? 1 : 0,
+            transition: 'opacity 700ms ease',
+          }}
+        />
+      )}
+
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90 group-hover:opacity-95 transition-opacity" />
 
-      {/* Logo Overlay - Increased by 20% (w-16 to w-20) */}
+      {/* Logo Overlay */}
       <div className="absolute top-6 left-6 w-20 h-20 bg-zinc-900/40 backdrop-blur-md rounded-2xl border border-blue-500/30 flex items-center justify-center p-4 group-hover:border-blue-500 transition-colors duration-500 shadow-2xl">
         <img src={group.logoUrl} alt={`${group.name} logo`} className="w-full h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity" />
       </div>
@@ -40,7 +97,7 @@ const GroupCard: React.FC<GroupCardProps> = ({ group, onClick }) => {
         <p className="text-zinc-300 text-sm leading-relaxed opacity-90 group-hover:opacity-100 transition-all duration-500 line-clamp-2">
           {group.shortDescription}
         </p>
-        
+
         {/* Animated Bottom Bar */}
         <div className="mt-5 w-12 h-1 bg-blue-500/30 rounded-full group-hover:w-full group-hover:bg-blue-500 transition-all duration-700" />
       </div>
