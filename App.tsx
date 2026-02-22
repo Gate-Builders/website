@@ -107,15 +107,7 @@ const App: React.FC = () => {
         
         <header className="mb-20 lg:mb-40 flex flex-col items-start pt-6 md:pt-10">
           <div className="flex flex-col sm:flex-row sm:items-center gap-4 md:gap-6 mb-8 md:mb-12 w-full">
-            <div className="inline-flex items-center gap-2 px-5 py-2 md:px-6 md:py-2.5 bg-blue-500/10 backdrop-blur-xl border border-blue-500/20 rounded-full shadow-[0_0_20px_rgba(59,130,246,0.1)] w-fit">
-              <span className="relative flex h-2.5 w-2.5 md:h-3 md:w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-60"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 md:h-3 md:w-3 bg-blue-500 shadow-[0_0_12px_rgba(59,130,246,1)]"></span>
-              </span>
-              <span className="text-[10px] md:text-[12px] font-black text-blue-400 tracking-[0.4em] md:tracking-[0.6em] uppercase">GATE_PROTOCOL_ACTIVE</span>
-            </div>
-
-            <a 
+            <a
               href="https://discord.gg/d4fkbpWsGT" 
               target="_blank" 
               rel="noopener noreferrer"
