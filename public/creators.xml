@@ -7,6 +7,7 @@
     <imageUrl>https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&amp;fit=crop&amp;q=80&amp;w=1000</imageUrl>
     <logoUrl>https://api.dicebear.com/7.x/shapes/svg?seed=oslabs&amp;backgroundColor=3b82f6</logoUrl>
     <websiteUrl>https://marketplace.secondlife.com/en-US/stores/263991</websiteUrl>
+    <location>http://maps.secondlife.com/secondlife/Excession/94/121/79</location>
     <tags>
       <tag>Tools</tag>
     </tags>
@@ -34,6 +35,7 @@
     <videoUrl>./vids/vk-labs-vid-v2.mp4</videoUrl>
     <logoUrl>https://vk-labs.com/wp-content/uploads/2022/11/vklabslogo_simple.png</logoUrl>
     <websiteUrl>https://vk-labs.com/</websiteUrl>
+    <location>http://maps.secondlife.com/secondlife/Multiverse/129/136/2994</location>
     <tags>
       <tag>Builds</tag>
       <tag>Gadgets and Tools</tag>
@@ -47,7 +49,8 @@
     They provide quality devices and flyable ships. Development has halted but their products are still amongst the favorites.</longDescription>
     <imageUrl>./img/os_labs_vendors.jpg</imageUrl>
     <logoUrl>./img/oslabs-banner.png</logoUrl>
-    <websiteUrl>http://maps.secondlife.com/secondlife/Han%20Loso/9/129/65</websiteUrl>
+    <websiteUrl></websiteUrl>
+    <location>http://maps.secondlife.com/secondlife/Han%20Loso/9/129/65</location>
     <tags>
       <tag>DHDs</tag>
       <tag>Gadgets and Tools</tag>
@@ -61,6 +64,7 @@
     <imageUrl>https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&amp;fit=crop&amp;q=80&amp;w=1000</imageUrl>
     <logoUrl>https://api.dicebear.com/7.x/shapes/svg?seed=oslabs&amp;backgroundColor=3b82f6</logoUrl>
     <websiteUrl></websiteUrl>
+    <location>http://maps.secondlife.com/secondlife/Partners%20In%20Crime/207/216/21</location>
     <tags>
       <tag>Tools</tag>
     </tags>
