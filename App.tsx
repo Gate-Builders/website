@@ -167,7 +167,7 @@ const App: React.FC = () => {
             <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-center md:text-left">
               <div className="text-3xl md:text-4xl font-black text-zinc-800 tracking-tighter select-none">GBH</div>
               <div className="hidden md:block w-px h-10 bg-zinc-800/50"></div>
-              <div className="font-bold tracking-[0.3em] md:tracking-[0.4em] text-[9px] md:text-[10px] uppercase opacity-40">EST. 2008 // ARCHIVING THE VIRTUAL FRONTIER</div>
+              <div className="font-bold tracking-[0.3em] md:tracking-[0.4em] text-[9px] md:text-[10px] uppercase opacity-40">EST. 2026 // CONNECTING THE VIRTUAL FRONTIER</div>
             </div>
             <div className="flex flex-wrap justify-center gap-6 md:gap-12 font-black uppercase tracking-[0.3em] text-[9px] md:text-[11px]">
               <a href="https://discord.gg/d4fkbpWsGT" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zinc-200 hover:text-blue-400 transition-all hover:-translate-y-1">
