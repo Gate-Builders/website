@@ -9,7 +9,7 @@ export interface Group {
   websiteUrl: string;
   videoUrl?: string;
   tags: string[];
-  category: 'Gate Network' | 'Creators' | 'Experiences';
+  category: 'Networks' | 'Creators' | 'Experiences';
 }
 
 export interface ModalProps {
