@@ -75,14 +75,42 @@ const GroupModal: React.FC<ModalProps> = ({ group, onClose }) => {
           </div>
           
           {/* Scrollable Description Container */}
-          <div className="flex-grow md:overflow-y-auto custom-scrollbar md:pr-6 mb-8 md:mb-10">
+          <div className="flex-grow md:overflow-y-auto custom-scrollbar md:pr-6 mb-6 md:mb-8">
             <p className="text-zinc-400 text-lg md:text-xl leading-relaxed font-light whitespace-pre-line">
               {group.longDescription}
             </p>
           </div>
 
+          {/* Gate Address Buttons */}
+          {(group.ASN_gateAddress || group.NOVUM_gateAddress) && (
+            <div className="flex-shrink-0 flex flex-wrap gap-3 mb-6 md:mb-8">
+              {group.ASN_gateAddress && (
+                <a
+                  href={`https://www.alpha-fox.com/asn/view/${group.ASN_gateAddress.toLowerCase().replace(/ /g, '_')}/`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col gap-0.5 px-4 py-3 bg-zinc-900/80 border border-zinc-700/60 hover:border-blue-500/60 hover:bg-zinc-800/80 rounded-xl min-w-[140px] transition-all duration-200 group/asn"
+                >
+                  <span className="text-white group-hover/asn:text-blue-300 font-mono font-bold text-sm tracking-wide transition-colors">/d {group.ASN_gateAddress}</span>
+                  <span className="text-zinc-500 text-[9px] uppercase tracking-[0.2em] font-black">ASN Stargate</span>
+                </a>
+              )}
+              {group.NOVUM_gateAddress && (
+                <a
+                  href={`https://stargatenet.work/profile.php?&gate=${group.NOVUM_gateAddress.replace(/ /g, '+')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col gap-0.5 px-4 py-3 bg-zinc-900/80 border border-zinc-700/60 hover:border-blue-500/60 hover:bg-zinc-800/80 rounded-xl min-w-[140px] transition-all duration-200 group/novum"
+                >
+                  <span className="text-white group-hover/novum:text-blue-300 font-mono font-bold text-sm tracking-wide transition-colors">/d {group.NOVUM_gateAddress}</span>
+                  <span className="text-zinc-500 text-[9px] uppercase tracking-[0.2em] font-black">NOVUM Stargate</span>
+                </a>
+              )}
+            </div>
+          )}
+
           {/* Footer/Action Section */}
-          <div className="flex-shrink-0 space-y-8 md:space-y-10">
+          <div className="flex-shrink-0 space-y-6 md:space-y-8">
             <div className="flex flex-wrap gap-3">
               {group.tags.map(tag => (
                 <span key={tag} className="text-[10px] md:text-[11px] text-zinc-400 font-black px-3 py-1.5 md:px-4 md:py-2 rounded-xl bg-zinc-800/30 border border-zinc-800 uppercase tracking-widest transition-colors hover:border-blue-500/50 hover:text-blue-400">
@@ -90,21 +118,48 @@ const GroupModal: React.FC<ModalProps> = ({ group, onClose }) => {
                 </span>
               ))}
             </div>
-            
-            <a 
-              href={group.websiteUrl} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="group relative inline-flex items-center justify-center w-full py-5 md:py-6 bg-blue-600 hover:bg-blue-500 text-white font-black rounded-[1.5rem] transition-all duration-500 shadow-2xl shadow-blue-600/30 active:scale-[0.97] uppercase tracking-[0.3em] text-xs md:text-sm overflow-hidden"
-            >
-              <span className="relative z-10 flex items-center">
-                Launch Interface
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-5 md:w-5 ml-4 group-hover:translate-x-1.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-            </a>
+
+            <div className="flex flex-col gap-3">
+              {group.websiteUrl && (
+                <a
+                  href={group.websiteUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 w-full py-3 md:py-4 bg-transparent border border-zinc-700 hover:border-zinc-500 text-zinc-300 hover:text-white font-bold rounded-[1.5rem] transition-all duration-300 text-xs md:text-sm uppercase tracking-[0.2em]"
+                >
+                  Visit official website
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              )}
+
+              {group.location ? (
+                <a
+                  href={group.location}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative inline-flex items-center justify-center w-full py-5 md:py-6 bg-blue-600 hover:bg-blue-500 text-white font-black rounded-[1.5rem] transition-all duration-500 shadow-2xl shadow-blue-600/30 active:scale-[0.97] uppercase tracking-[0.3em] text-xs md:text-sm overflow-hidden"
+                >
+                  <span className="relative z-10 flex items-center">
+                    Launch Interface
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-5 md:w-5 ml-4 group-hover:translate-x-1.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                </a>
+              ) : (
+                <div className="inline-flex items-center justify-center w-full py-5 md:py-6 bg-zinc-800/50 text-zinc-600 font-black rounded-[1.5rem] uppercase tracking-[0.3em] text-xs md:text-sm cursor-not-allowed border border-zinc-800">
+                  <span className="flex items-center gap-3">
+                    Launch Interface
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-5 md:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                    </svg>
+                  </span>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

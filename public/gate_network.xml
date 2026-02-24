@@ -8,6 +8,7 @@
     <videoUrl>./vids/asn-vid.mp4</videoUrl>
     <logoUrl>./img/asn-logo.png</logoUrl>
     <websiteUrl>https://www.alpha-fox.com/</websiteUrl>
+    <location>http://maps.secondlife.com/secondlife/Han%20Loso/70/192/60</location>
     <tags>
       <tag>Prim based Stargates</tag>
       <tag>Public API</tag>
@@ -22,6 +23,7 @@
     <logoUrl>./img/novum-logo-256.png</logoUrl>
     <videoUrl>./vids/novum-bg-vid2.mp4</videoUrl>
     <websiteUrl>https://stargatenet.work/</websiteUrl>
+    <location>http://maps.secondlife.com/secondlife/Vodka/132/107/21</location>
     <tags>
       <tag>Mesh Based Stargates</tag>
       <tag>Public API</tag>

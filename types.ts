@@ -8,6 +8,9 @@ export interface Group {
   logoUrl: string;
   websiteUrl: string;
   videoUrl?: string;
+  location?: string;
+  ASN_gateAddress?: string;
+  NOVUM_gateAddress?: string;
   tags: string[];
   category: 'Networks' | 'Creators' | 'Experiences';
 }

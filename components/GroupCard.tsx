@@ -50,10 +50,10 @@ const GroupCard: React.FC<GroupCardProps> = ({ group, onClick }) => {
     >
       {/* Background Image – zooms in on hover, fades out when video takes over */}
       <div
-        className="absolute inset-0 bg-cover bg-center group-hover:scale-110"
+        className="absolute inset-0 bg-cover bg-center group-hover:scale-125"
         style={{
           backgroundImage: `url(${group.imageUrl})`,
-          transition: 'transform 1000ms ease, opacity 500ms ease',
+          transition: 'transform 1500ms ease, scale 1500ms ease, opacity 500ms ease',
           opacity: showVideo ? 0 : 1,
         }}
       />

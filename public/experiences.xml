@@ -1,30 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <groups>
-  <group id="sgmu" category="Experiences">
-    <name>Stargate Multiverse</name>
-    <shortDescription>One sim connecting the Gate networks and fans.</shortDescription>
-    <longDescription>The Stargate Multiverse Project or SGMU for short, is a collaborative Roleplay initiative on Second Life. Dedicated to recreating the awe and wonder of the Stargate franchise within a multi-sim virtual environment. Join us as we step through the event horizon into a galaxy of intrigue, diplomacy, and discovery.</longDescription>
-    <imageUrl>https://sgmu.vk-labs.com/sources/sgc/controlroom2.jpg</imageUrl>
-    <logoUrl>https://sgmu.vk-labs.com/logo.png</logoUrl>
+  <group id="vodka" category="Experiences">
+    <name>Torvaldsland 2</name>
+    <shortDescription>Pure chaos sim with friendly aliens and shenanigans.</shortDescription>
+    <longDescription>Discover a place full of wonders and buildings to visit, take a car for a spin in this interactive and friendly homeworld of AFKEA and more.</longDescription>
+    <ASN_gateAddress></ASN_gateAddress>
+    <NOVUM_gateAddress>Torvaldsland 2 Electric Boogaloo</NOVUM_gateAddress>
+    <imageUrl>./img/vodka_img.jpg</imageUrl>
+    <logoUrl>./img/asgard-emoji.png</logoUrl>
+    <videoUrl>./vids/vodka-vid.mp4</videoUrl>
+    <websiteUrl></websiteUrl>
+    <location>http://maps.secondlife.com/secondlife/Vodka/132/107/21</location>
+    <tags>
+      <tag>Roleplay</tag>
+      <tag>Novum</tag>
+      <tag>Networking</tag>
+    </tags>
+  </group>
+  <group id="sgc-sgmu" category="Experiences">
+    <name>Stargate Command</name>
+    <shortDescription>Visit the iconic Stargate SG-1 base.</shortDescription>
+    <longDescription>The Stargate Command (SGC) is a top-secret military organization located in the Cheyenne Mountain Complex in Colorado. It is responsible for operating the Stargate and all off-world activities involving it. The facility is equipped with multiple levels, interactions and NPCs.</longDescription>
+    <ASN_gateAddress>SGC</ASN_gateAddress>
+    <NOVUM_gateAddress>SGC</NOVUM_gateAddress>
+    <imageUrl>./img/controlroom2.jpg</imageUrl>
+    <logoUrl>./img/sgc-logo.png</logoUrl>
     <videoUrl>./vids/sgmu-vid-v2.mp4</videoUrl>
-    <websiteUrl>https://sgmu.vk-labs.com/</websiteUrl>
+    <websiteUrl>https://sgmu.space/</websiteUrl>
+    <location>http://maps.secondlife.com/secondlife/Multiverse/143/197/24</location>
     <tags>
       <tag>Roleplay</tag>
       <tag>RPG-Light</tag>
       <tag>Networking</tag>
     </tags>
   </group>
-  <group id="vodka" category="Experiences">
-    <name>Torvaldsland 2</name>
-    <shortDescription>Pure chaos sim with friendly aliens and shenanigans.</shortDescription>
-    <longDescription>Discover a place full of wonders and buildings to visit, take a car for a spin in this interactive and friendly homeworld of AFKEA and more.</longDescription>
-    <imageUrl>./img/vodka_img.jpg</imageUrl>
-    <logoUrl>./img/asgard-emoji.png</logoUrl>
-    <videoUrl>./vids/vodka-vid.mp4</videoUrl>
-    <websiteUrl>http://maps.secondlife.com/secondlife/Vodka/132/107/21</websiteUrl>
+  <group id="abydos-sgmu" category="Experiences">
+    <name>Stargate Command</name>
+    <shortDescription>Visit the iconic Stargate SG-1 base.</shortDescription>
+    <longDescription>The Stargate Command (SGC) is a top-secret military organization located in the Cheyenne Mountain Complex in Colorado. It is responsible for operating the Stargate and all off-world activities involving it. The facility is equipped with multiple levels, interactions and NPCs.</longDescription>
+    <ASN_gateAddress>SGC</ASN_gateAddress>
+    <NOVUM_gateAddress>SGC</NOVUM_gateAddress>
+    <imageUrl>./img/controlroom2.jpg</imageUrl>
+    <logoUrl>./img/sgc-logo.png</logoUrl>
+    <videoUrl>./vids/sgmu-vid-v2.mp4</videoUrl>
+    <websiteUrl>https://sgmu.space/</websiteUrl>
+    <location>http://maps.secondlife.com/secondlife/Multiverse/143/197/24</location>
     <tags>
       <tag>Roleplay</tag>
-      <tag>Novum</tag>
+      <tag>RPG-Light</tag>
       <tag>Networking</tag>
     </tags>
   </group>

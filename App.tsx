@@ -40,6 +40,9 @@ const App: React.FC = () => {
         logoUrl: safeText(node, 'logoUrl'),
         websiteUrl: safeText(node, 'websiteUrl'),
         videoUrl: safeText(node, 'videoUrl') || undefined,
+        location: safeText(node, 'location') || undefined,
+        ASN_gateAddress: safeText(node, 'ASN_gateAddress') || undefined,
+        NOVUM_gateAddress: safeText(node, 'NOVUM_gateAddress') || undefined,
         tags: Array.from(node.getElementsByTagName('tag')).map(t => t.textContent || '')
       }));
     };
@@ -163,7 +166,7 @@ const App: React.FC = () => {
         <footer className="mt-auto pt-12 md:pt-16 border-t border-zinc-900/50 flex flex-col gap-6 pb-4">
           <div className="flex flex-col md:flex-row justify-between items-center text-zinc-500 text-xs md:text-sm gap-8">
             <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-center md:text-left">
-              <div className="text-3xl md:text-4xl font-black text-zinc-800 tracking-tighter select-none">GBH</div>
+              <div className="text-3xl md:text-4xl font-black text-zinc-800 tracking-tighter select-none">GATE BUILDERS</div>
               <div className="hidden md:block w-px h-10 bg-zinc-800/50"></div>
               <div className="font-bold tracking-[0.3em] md:tracking-[0.4em] text-[9px] md:text-[10px] uppercase opacity-40">EST. 2026 // CONNECTING THE VIRTUAL FRONTIER</div>
             </div>
