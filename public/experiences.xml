@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<groups>
+  <group id="sgmu" category="Experiences">
+    <name>Stargate Multiverse</name>
+    <shortDescription>One sim connecting the Gate networks and fans.</shortDescription>
+    <longDescription>The Stargate Multiverse Project or SGMU for short, is a collaborative Roleplay initiative on Second Life. Dedicated to recreating the awe and wonder of the Stargate franchise within a multi-sim virtual environment. Join us as we step through the event horizon into a galaxy of intrigue, diplomacy, and discovery.</longDescription>
+    <imageUrl>https://sgmu.vk-labs.com/sources/sgc/controlroom2.jpg</imageUrl>
+    <logoUrl>https://sgmu.vk-labs.com/logo.png</logoUrl>
+    <videoUrl>./vids/sgmu-vid-v2.mp4</videoUrl>
+    <websiteUrl>https://sgmu.vk-labs.com/</websiteUrl>
+    <tags>
+      <tag>Roleplay</tag>
+      <tag>RPG-Light</tag>
+      <tag>Networking</tag>
+    </tags>
+  </group>
+  <group id="vodka" category="Experiences">
+    <name>Torvaldsland 2</name>
+    <shortDescription>Pure chaos sim with friendly aliens and shenanigans.</shortDescription>
+    <longDescription>Discover a place full of wonders and buildings to visit, take a car for a spin in this interactive and friendly homeworld of AFKEA and more.</longDescription>
+    <imageUrl>./img/vodka_img.jpg</imageUrl>
+    <logoUrl>./img/asgard-emoji.png</logoUrl>
+    <videoUrl>./vids/vodka-vid.mp4</videoUrl>
+    <websiteUrl>http://maps.secondlife.com/secondlife/Vodka/132/107/21</websiteUrl>
+    <tags>
+      <tag>Roleplay</tag>
+      <tag>Novum</tag>
+      <tag>Networking</tag>
+    </tags>
+  </group>
+</groups>

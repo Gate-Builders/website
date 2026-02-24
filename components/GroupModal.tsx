@@ -76,7 +76,7 @@ const GroupModal: React.FC<ModalProps> = ({ group, onClose }) => {
           
           {/* Scrollable Description Container */}
           <div className="flex-grow md:overflow-y-auto custom-scrollbar md:pr-6 mb-8 md:mb-10">
-            <p className="text-zinc-400 text-lg md:text-xl leading-relaxed font-light">
+            <p className="text-zinc-400 text-lg md:text-xl leading-relaxed font-light whitespace-pre-line">
               {group.longDescription}
             </p>
           </div>
