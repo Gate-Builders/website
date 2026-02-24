@@ -52,7 +52,7 @@ const App: React.FC = () => {
           fetch('./experiences.xml').then(r => r.text()),
         ]);
 
-        const gateNetwork = parseGroupsXml(parser.parseFromString(gateNetworkText, "text/xml"));
+        const gateNetwork = shuffleArray(parseGroupsXml(parser.parseFromString(gateNetworkText, "text/xml")));
         const creators = shuffleArray(parseGroupsXml(parser.parseFromString(creatorsText, "text/xml")));
         const experiences = shuffleArray(parseGroupsXml(parser.parseFromString(experiencesText, "text/xml")));
 
