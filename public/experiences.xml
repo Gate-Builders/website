@@ -13,8 +13,8 @@
     <location>http://maps.secondlife.com/secondlife/Vodka/132/107/21</location>
     <tags>
       <tag>Roleplay</tag>
-      <tag>Novum</tag>
       <tag>Networking</tag>
+      <tag>NOVUM</tag>
     </tags>
   </group>
   <group id="sgc-sgmu" category="Experiences">
@@ -25,30 +25,97 @@
     <NOVUM_gateAddress>SGC</NOVUM_gateAddress>
     <imageUrl>./img/controlroom2.jpg</imageUrl>
     <logoUrl>./img/sgc-logo.png</logoUrl>
-    <videoUrl>./vids/sgmu-vid-v2.mp4</videoUrl>
+    <videoUrl></videoUrl>
     <websiteUrl>https://sgmu.space/</websiteUrl>
     <location>http://maps.secondlife.com/secondlife/Multiverse/143/197/24</location>
     <tags>
       <tag>Roleplay</tag>
-      <tag>RPG-Light</tag>
-      <tag>Networking</tag>
+      <tag>RPG</tag>
+      <tag>ASN</tag>
+      <tag>NOVUM</tag>
     </tags>
   </group>
   <group id="abydos-sgmu" category="Experiences">
-    <name>Stargate Command</name>
-    <shortDescription>Visit the iconic Stargate SG-1 base.</shortDescription>
-    <longDescription>The Stargate Command (SGC) is a top-secret military organization located in the Cheyenne Mountain Complex in Colorado. It is responsible for operating the Stargate and all off-world activities involving it. The facility is equipped with multiple levels, interactions and NPCs.</longDescription>
-    <ASN_gateAddress>SGC</ASN_gateAddress>
-    <NOVUM_gateAddress>SGC</NOVUM_gateAddress>
-    <imageUrl>./img/controlroom2.jpg</imageUrl>
-    <logoUrl>./img/sgc-logo.png</logoUrl>
-    <videoUrl>./vids/sgmu-vid-v2.mp4</videoUrl>
+    <name>Abydos</name>
+    <shortDescription>Where the Goa'ulds used to reign, no more.</shortDescription>
+    <longDescription>Abydos was the destination of Earth's first Stargate mission, where Daniel Jackson met his wife Sha're. The desert world's Egyptian-styled population lived under Goa'uld rule until freed by SG-1.</longDescription>
+    <ASN_gateAddress>Abydos</ASN_gateAddress>
+    <imageUrl>./img/abydos.jpg</imageUrl>
+    <logoUrl>./img/abydos-poo.png</logoUrl>
+    <videoUrl></videoUrl>
     <websiteUrl>https://sgmu.space/</websiteUrl>
-    <location>http://maps.secondlife.com/secondlife/Multiverse/143/197/24</location>
+    <location>http://maps.secondlife.com/secondlife/Multiverse/144/221/2193</location>
     <tags>
       <tag>Roleplay</tag>
-      <tag>RPG-Light</tag>
-      <tag>Networking</tag>
+      <tag>RPG</tag>
+      <tag>ASN</tag>
+    </tags>
+  </group>
+  <group id="Atlantis-sgmu" category="Experiences">
+    <name>Atlantis</name>
+    <shortDescription>The city of the Atlants, also called the 'Ancients'.</shortDescription>
+    <longDescription>Atlantis is a massive city-ship built by the Ancients millions of years ago. It served as their capital in the Pegasus Galaxy. The city is highly advanced, featuring zero-point module power systems, and more...</longDescription>
+    <ASN_gateAddress>Atlantis</ASN_gateAddress>
+    <imageUrl>./img/atlantis.jpg</imageUrl>
+    <logoUrl>./img/SGA.png</logoUrl>
+    <videoUrl></videoUrl>
+    <websiteUrl>https://sgmu.space/</websiteUrl>
+    <location>http://maps.secondlife.com/secondlife/Multiverse/116/128/2522</location>
+    <tags>
+      <tag>Roleplay</tag>
+      <tag>RPG</tag>
+      <tag>ASN</tag>
+    </tags>
+  </group>
+  <group id="icarus-sgmu" category="Experiences">
+    <name>Icarus</name>
+    <shortDescription>The remote advanced base of the Stargate Program.</shortDescription>
+    <longDescription>Icarus Base was established on a remote planet with a highly volatile naquadria core. Its sole purpose was to provide the massive amount of energy required to dial the nine-chevron address found in the Ancient database.</longDescription>
+    <NOVUM_gateAddress>Icarus</NOVUM_gateAddress>
+    <imageUrl>./img/icarus.jpg</imageUrl>
+    <logoUrl>./img/SG-ICARUS-BASE.png</logoUrl>
+    <videoUrl></videoUrl>
+    <websiteUrl>https://sgmu.space/</websiteUrl>
+    <location>http://maps.secondlife.com/secondlife/Multiverse/195/79/1552</location>
+    <tags>
+      <tag>Roleplay</tag>
+      <tag>RPG</tag>
+      <tag>NOVUM</tag>
+    </tags>
+  </group>
+  <group id="midway-sgmu" category="Experiences">
+    <name>Midway Station</name>
+    <shortDescription>The first space station created by the Tauri.</shortDescription>
+    <longDescription>The Midway Station was built in intergalactic space to provide a secure stopover for Stargate travel between Earth and Atlantis, housing Stargates from both galaxies. The station's strategic importance made it a Wraith target who attempted to reach Earth through it, ultimately leading to its destruction to prevent invasion.</longDescription>
+    <NOVUM_gateAddress>Midway</NOVUM_gateAddress>
+    <ASN_gateAddress>Midway</ASN_gateAddress>
+    <imageUrl>./img/midway.jpg</imageUrl>
+    <logoUrl>./img/midway-logo-2dflat.png</logoUrl>
+    <videoUrl></videoUrl>
+    <websiteUrl>https://sgmu.space/</websiteUrl>
+    <location>http://maps.secondlife.com/secondlife/Multiverse/40/143/1550</location>
+    <tags>
+      <tag>Roleplay</tag>
+      <tag>RPG</tag>
+      <tag>ASN</tag>
+      <tag>NOVUM</tag>
+    </tags>
+  </group>
+  <group id="othala-sgmu" category="Experiences">
+    <name>Othala</name>
+    <shortDescription>The homeworld of the little greys.</shortDescription>
+    <longDescription>Othala is the Asgard homeworld, a highly advanced planet serving as the political, scientific, and cultural center of the Asgard.</longDescription>
+    <NOVUM_gateAddress>Othala</NOVUM_gateAddress>
+    <imageUrl>./img/othala1.png</imageUrl>
+    <logoUrl>./img/asgard-head-logo.png</logoUrl>
+    <videoUrl></videoUrl>
+    <websiteUrl>https://sgmu.space/</websiteUrl>
+    <location>http://maps.secondlife.com/secondlife/Multiverse/128/242/1753</location>
+    <tags>
+      <tag>Roleplay</tag>
+      <tag>RPG</tag>
+      <tag>High Council</tag>
+      <tag>NOVUM</tag>
     </tags>
   </group>
 </groups>
