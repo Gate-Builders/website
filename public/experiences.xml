@@ -85,7 +85,7 @@
   </group>
   <group id="midway-sgmu" category="Experiences">
     <name>Midway Station</name>
-    <shortDescription>The first space station created by the Tauri.</shortDescription>
+    <shortDescription>The first space station created by the Tau'ri Stargate Program.</shortDescription>
     <longDescription>The Midway Station was built in intergalactic space to provide a secure stopover for Stargate travel between Earth and Atlantis, housing Stargates from both galaxies. The station's strategic importance made it a Wraith target who attempted to reach Earth through it, ultimately leading to its destruction to prevent invasion.</longDescription>
     <NOVUM_gateAddress>Midway</NOVUM_gateAddress>
     <ASN_gateAddress>Midway</ASN_gateAddress>
