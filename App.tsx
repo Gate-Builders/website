@@ -1,76 +1,62 @@
 import React, { useState, useEffect } from 'react';
 import GroupCard from './components/GroupCard';
 import GroupModal from './components/GroupModal';
-import TextModal from './components/TextModal';
 import { Group } from './types';
+
+const shuffleArray = <T,>(arr: T[]): T[] => {
+  const shuffled = [...arr];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
 
 const App: React.FC = () => {
   const [groups, setGroups] = useState<Group[]>([]);
-  const [manifesto, setManifesto] = useState({ title: '', motto: '', body: '' });
-  const [legal, setLegal] = useState({ title: '', body: '' });
   const [loading, setLoading] = useState(true);
   const [selectedGroup, setSelectedGroup] = useState<Group | null>(null);
-  const [isManifestoOpen, setIsManifestoOpen] = useState(false);
-  const [isLegalOpen, setIsLegalOpen] = useState(false);
 
   const categories: Group['category'][] = ['Gate Network', 'Creators', 'Experiences'];
 
   useEffect(() => {
+    const parser = new DOMParser();
+
+    const parseGroupsXml = (doc: Document): Group[] => {
+      const safeText = (node: Element, tag: string) => {
+        const el = node.getElementsByTagName(tag)[0];
+        return el ? el.textContent || '' : '';
+      };
+      if (doc.getElementsByTagName('parsererror').length > 0) {
+        console.error("XML parsing error. Check for unescaped characters like '&'.");
+      }
+      return Array.from(doc.getElementsByTagName('group')).map(node => ({
+        id: node.getAttribute('id') || Math.random().toString(),
+        category: (node.getAttribute('category') || 'Gate Network') as Group['category'],
+        name: safeText(node, 'name'),
+        shortDescription: safeText(node, 'shortDescription'),
+        longDescription: safeText(node, 'longDescription'),
+        imageUrl: safeText(node, 'imageUrl'),
+        logoUrl: safeText(node, 'logoUrl'),
+        websiteUrl: safeText(node, 'websiteUrl'),
+        videoUrl: safeText(node, 'videoUrl') || undefined,
+        tags: Array.from(node.getElementsByTagName('tag')).map(t => t.textContent || '')
+      }));
+    };
+
     const fetchData = async () => {
       try {
-        const parser = new DOMParser();
+        const [gateNetworkText, creatorsText, experiencesText] = await Promise.all([
+          fetch('./gate_network.xml').then(r => r.text()),
+          fetch('./creators.xml').then(r => r.text()),
+          fetch('./experiences.xml').then(r => r.text()),
+        ]);
 
-        // Helper to get text content safely
-        const safeText = (node: Element, tag: string) => {
-          const el = node.getElementsByTagName(tag)[0];
-          return el ? el.textContent || '' : '';
-        };
+        const gateNetwork = parseGroupsXml(parser.parseFromString(gateNetworkText, "text/xml"));
+        const creators = shuffleArray(parseGroupsXml(parser.parseFromString(creatorsText, "text/xml")));
+        const experiences = shuffleArray(parseGroupsXml(parser.parseFromString(experiencesText, "text/xml")));
 
-        // 1. Fetch & Parse Groups
-        const groupsRes = await fetch('./groups.xml');
-        const groupsText = await groupsRes.text();
-        const groupsDoc = parser.parseFromString(groupsText, "text/xml");
-        
-        // Check for parsing errors
-        if (groupsDoc.getElementsByTagName('parsererror').length > 0) {
-          console.error("XML Parsing Error in groups.xml. Check for unescaped characters like '&'.");
-        }
-
-        const groupNodes = Array.from(groupsDoc.getElementsByTagName('group'));
-        
-        const parsedGroups: Group[] = groupNodes.map(node => ({
-          id: node.getAttribute('id') || Math.random().toString(),
-          category: (node.getAttribute('category') || 'Gate Network') as Group['category'],
-          name: safeText(node, 'name'),
-          shortDescription: safeText(node, 'shortDescription'),
-          longDescription: safeText(node, 'longDescription'),
-          imageUrl: safeText(node, 'imageUrl'),
-          logoUrl: safeText(node, 'logoUrl'),
-          websiteUrl: safeText(node, 'websiteUrl'),
-          videoUrl: safeText(node, 'videoUrl') || undefined,
-          tags: Array.from(node.getElementsByTagName('tag')).map(t => t.textContent || '')
-        }));
-
-        // 2. Fetch & Parse Manifesto
-        const manifestoRes = await fetch('./manifesto.xml');
-        const manifestoText = await manifestoRes.text();
-        const manifestoDoc = parser.parseFromString(manifestoText, "text/xml");
-        setManifesto({
-          title: safeText(manifestoDoc.documentElement, 'title'),
-          motto: safeText(manifestoDoc.documentElement, 'motto'),
-          body: safeText(manifestoDoc.documentElement, 'body'),
-        });
-
-        // 3. Fetch & Parse Legal
-        const legalRes = await fetch('./legal.xml');
-        const legalText = await legalRes.text();
-        const legalDoc = parser.parseFromString(legalText, "text/xml");
-        setLegal({
-          title: safeText(legalDoc.documentElement, 'title'),
-          body: safeText(legalDoc.documentElement, 'body'),
-        });
-
-        setGroups(parsedGroups);
+        setGroups([...gateNetwork, ...creators, ...experiences]);
       } catch (error) {
         console.error("Error loading XML data:", error);
       } finally {
@@ -136,10 +122,13 @@ const App: React.FC = () => {
             </h1>
           </div>
 
-          <p className="text-zinc-400 text-lg md:text-3xl lg:text-4xl max-w-5xl font-light leading-tight drop-shadow-lg mt-12 md:mt-16">
-            The nexus for Second Life's Stargate collective. <br className="hidden md:block" />
-            <span className="text-white mt-3 md:mt-4 block font-medium opacity-90">Building a universe into the virtual world since 2008. Joining forces since 2026.</span>
+          <p className="text-zinc-400 text-lg md:text-3xl lg:text-5xl max-w-5xl font-light leading-tight drop-shadow-lg mt-12 md:mt-16 whitespace-nowrap">
+            The beating heart of Second Life's Stargate collective.
           </p>
+          <div className="mt-3 md:mt-4 flex flex-col gap-1">
+            <span className="text-white text-sm md:text-xl lg:text-3xl font-medium opacity-90 drop-shadow-lg whitespace-nowrap">Crafting an entire universe inside the virtual world since 2005.</span>
+            <span className="text-white text-sm md:text-xl lg:text-3xl font-medium opacity-90 drop-shadow-lg whitespace-nowrap">Joining forces as one since 2026.</span>
+          </div>
         </header>
 
         {/* Categorized Sections */}
@@ -173,22 +162,25 @@ const App: React.FC = () => {
         </div>
 
         {/* Footer info */}
-        <footer className="mt-auto pt-12 md:pt-16 border-t border-zinc-900/50 flex flex-col md:flex-row justify-between items-center text-zinc-500 text-xs md:text-sm gap-8 pb-16 md:pb-20">
-          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-center md:text-left">
-            <div className="text-3xl md:text-4xl font-black text-zinc-800 tracking-tighter select-none">GBH</div>
-            <div className="hidden md:block w-px h-10 bg-zinc-800/50"></div>
-            <div className="font-bold tracking-[0.3em] md:tracking-[0.4em] text-[9px] md:text-[10px] uppercase opacity-40">EST. 2008 // ARCHIVING THE VIRTUAL FRONTIER</div>
+        <footer className="mt-auto pt-12 md:pt-16 border-t border-zinc-900/50 flex flex-col gap-6 pb-4">
+          <div className="flex flex-col md:flex-row justify-between items-center text-zinc-500 text-xs md:text-sm gap-8">
+            <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-center md:text-left">
+              <div className="text-3xl md:text-4xl font-black text-zinc-800 tracking-tighter select-none">GBH</div>
+              <div className="hidden md:block w-px h-10 bg-zinc-800/50"></div>
+              <div className="font-bold tracking-[0.3em] md:tracking-[0.4em] text-[9px] md:text-[10px] uppercase opacity-40">EST. 2026 // CONNECTING THE VIRTUAL FRONTIER</div>
+            </div>
+            <div className="flex flex-wrap justify-center gap-6 md:gap-12 font-black uppercase tracking-[0.3em] text-[9px] md:text-[11px]">
+              <a href="https://discord.gg/d4fkbpWsGT" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zinc-200 hover:text-blue-400 transition-all hover:-translate-y-1">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037 19.736 19.736 0 0 0-4.885 1.515.069.069 0 0 0-.032.027C.533 9.048-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.927 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .077.01 10.255 10.255 0 0 0 .372.292.077.077 0 0 1-.008.128 12.51 12.51 0 0 1-1.872.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993.023.032.063.046.084.028a19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
+                </svg>
+                Discord
+              </a>
+            </div>
           </div>
-          <div className="flex flex-wrap justify-center gap-6 md:gap-12 font-black uppercase tracking-[0.3em] text-[9px] md:text-[11px]">
-            <button onClick={() => setIsManifestoOpen(true)} className="hover:text-blue-500 transition-all hover:-translate-y-1">Manifesto</button>
-            <button onClick={() => setIsLegalOpen(true)} className="hover:text-blue-500 transition-all hover:-translate-y-1">Legal Information</button>
-            <a href="https://discord.gg/d4fkbpWsGT" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zinc-200 hover:text-blue-400 transition-all hover:-translate-y-1">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037 19.736 19.736 0 0 0-4.885 1.515.069.069 0 0 0-.032.027C.533 9.048-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.927 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .077.01 10.255 10.255 0 0 0 .372.292.077.077 0 0 1-.008.128 12.51 12.51 0 0 1-1.872.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993.023.032.063.046.084.028a19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
-              </svg>
-              Discord
-            </a>
-          </div>
+          <p className="text-[10px] text-zinc-700 leading-relaxed text-center md:text-left opacity-60">
+            This website is a fan project and is in no way official. Stargate and related properties are trademarks of Amazon / MGM Studios. All rights reserved. Second Life is a trademark of Linden Research, Inc. Linden Lab is not affiliated with this project.
+          </p>
         </footer>
       </main>
 
@@ -198,22 +190,7 @@ const App: React.FC = () => {
         onClose={() => setSelectedGroup(null)} 
       />
 
-      {/* Manifesto Modal */}
-      <TextModal 
-        isOpen={isManifestoOpen}
-        onClose={() => setIsManifestoOpen(false)}
-        title={manifesto.title}
-        subtitle={manifesto.motto}
-        content={manifesto.body}
-      />
 
-      {/* Legal Info Modal */}
-      <TextModal 
-        isOpen={isLegalOpen}
-        onClose={() => setIsLegalOpen(false)}
-        title={legal.title}
-        content={legal.body}
-      />
     </div>
   );
 };

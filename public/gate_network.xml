@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<groups>
+  <group id="alpha-fox" category="Gate Network">
+    <name>Alteran Stargate Network</name>
+    <shortDescription>Your next virtual odyssey awaits - Est. 2007.</shortDescription>
+    <longDescription>The Alteran Stargate Network is a long-running, fan-built Stargate teleportation system. Fully launched in 2008 (with roots going back to 2005), ASN connects hundreds of regions across the grid with fully functional, scripted gates that let residents rez, register, and instantly travel. Owners can also take advantage of its web-based management.</longDescription>
+    <imageUrl>./img/asn-hub.jpg</imageUrl>
+    <videoUrl>./vids/asn-vid.mp4</videoUrl>
+    <logoUrl>./img/asn-logo.png</logoUrl>
+    <websiteUrl>https://www.alpha-fox.com/</websiteUrl>
+    <tags>
+      <tag>Prim based Stargates</tag>
+      <tag>Public API</tag>
+      <tag>+400 Active Stargates</tag>
+    </tags>
+  </group>
+  <group id="novum-network" category="Gate Network">
+    <name>Novum Network</name>
+    <shortDescription>A new Gate network trying to improve visual fidelity founded in 2023.</shortDescription>
+    <longDescription>Novum Network brings together visionaries from across the digital landscape to collaborate on experimental design and community-driven projects. They set new standards for virtual identity through visual storytelling and avant-garde design patterns.</longDescription>
+    <imageUrl>./img/novum_netw.jpg</imageUrl>
+    <logoUrl>./img/novum-logo-256.png</logoUrl>
+    <videoUrl>./vids/novum-bg-vid2.mp4</videoUrl>
+    <websiteUrl>https://stargatenet.work/</websiteUrl>
+    <tags>
+      <tag>Mesh Based Stargates</tag>
+      <tag>Public API</tag>
+      <tag>Early adopters</tag>
+    </tags>
+  </group>
+</groups>

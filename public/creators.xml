@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<groups>
+  <group id="carters" category="Creators">
+    <name>Carter's Creations</name>
+    <shortDescription>REDACTED.</shortDescription>
+    <longDescription>REDACTED.</longDescription>
+    <imageUrl>https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&amp;fit=crop&amp;q=80&amp;w=1000</imageUrl>
+    <logoUrl>https://api.dicebear.com/7.x/shapes/svg?seed=oslabs&amp;backgroundColor=3b82f6</logoUrl>
+    <websiteUrl>https://marketplace.secondlife.com/en-US/stores/263991</websiteUrl>
+    <tags>
+      <tag>Tools</tag>
+    </tags>
+  </group>
+  <group id="hexem" category="Creators">
+    <name>Hexem's House of Gadgets</name>
+    <shortDescription>Gadgets and Devices that work like magic.</shortDescription>
+    <longDescription>Hexem's House of Gadgets is your go-to source for useful tech devices, scripts, and streamlined communication resources.
+    They offer a mix of ready-to-use gadgets and bespoke custom scripting services to solve any technical challenge.
+    Discover how their tools and professional collaborations can elevate your virtual lifestyle today.</longDescription>
+    <imageUrl>./img/hexem_bg.jpg</imageUrl>
+    <logoUrl>./img/hh_logo_256-TP.png</logoUrl>
+    <websiteUrl>https://marketplace.secondlife.com/en-US/stores/67953</websiteUrl>
+    <tags>
+      <tag>Gadgets</tag>
+      <tag>Custom Scripting</tag>
+    </tags>
+  </group>
+  <group id="vk-labs" category="Creators">
+    <name>Vk Labs</name>
+    <shortDescription>Advanced interactive systems, Stargate devices and RP ready builds.</shortDescription>
+    <longDescription>Vk Labs specializes in creating devices to fit all your Stargate needs from DHDs to advanced computers helping you manage your Stargates. 
+  They also provide builds that you can either use for your own as your homebase or for roleplaying.</longDescription>
+    <imageUrl>./img/vk_labs_store.jpg</imageUrl>
+    <videoUrl>./vids/vk-labs-vid-v2.mp4</videoUrl>
+    <logoUrl>https://vk-labs.com/wp-content/uploads/2022/11/vklabslogo_simple.png</logoUrl>
+    <websiteUrl>https://vk-labs.com/</websiteUrl>
+    <tags>
+      <tag>Builds</tag>
+      <tag>Gadgets and Tools</tag>
+      <tag>Mesh Stargate Mod</tag>
+    </tags>
+  </group>
+  <group id="oslabs" category="Creators">
+    <name>OS Labs</name>
+    <shortDescription>The OG Stargate creator that inspired a lot.</shortDescription>
+    <longDescription>OS Labs was the source of many great products back in Eternal Calm.
+    They provide quality devices and flyable ships. Development has halted but their products are still amongst the favorites.</longDescription>
+    <imageUrl>./img/os_labs_vendors.jpg</imageUrl>
+    <logoUrl>./img/oslabs-banner.png</logoUrl>
+    <websiteUrl>http://maps.secondlife.com/secondlife/Han%20Loso/9/129/65</websiteUrl>
+    <tags>
+      <tag>DHDs</tag>
+      <tag>Gadgets and Tools</tag>
+      <tag>Ships</tag>
+    </tags>
+  </group>
+  <group id="scssystems" category="Creators">
+    <name>SCS Systems</name>
+    <shortDescription>REDACTED.</shortDescription>
+    <longDescription>REDACTED.</longDescription>
+    <imageUrl>https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&amp;fit=crop&amp;q=80&amp;w=1000</imageUrl>
+    <logoUrl>https://api.dicebear.com/7.x/shapes/svg?seed=oslabs&amp;backgroundColor=3b82f6</logoUrl>
+    <websiteUrl></websiteUrl>
+    <tags>
+      <tag>Tools</tag>
+    </tags>
+  </group>
+  <group id="shadow" category="Creators">
+    <name>Shadow Tech</name>
+    <shortDescription>REDACTED.</shortDescription>
+    <longDescription>REDACTED.</longDescription>
+    <imageUrl>https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&amp;fit=crop&amp;q=80&amp;w=1000</imageUrl>
+    <logoUrl>https://api.dicebear.com/7.x/shapes/svg?seed=oslabs&amp;backgroundColor=3b82f6</logoUrl>
+    <websiteUrl>https://marketplace.secondlife.com/en-US/stores/11390</websiteUrl>
+    <tags>
+      <tag>Gadgets and Tools</tag>
+    </tags>
+  </group>
+</groups>
