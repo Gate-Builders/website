@@ -17,7 +17,7 @@ const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [selectedGroup, setSelectedGroup] = useState<Group | null>(null);
 
-  const categories: Group['category'][] = ['Gate Network', 'Creators', 'Experiences'];
+  const categories: Group['category'][] = ['Networks', 'Creators', 'Experiences'];
 
   useEffect(() => {
     const parser = new DOMParser();
@@ -32,7 +32,7 @@ const App: React.FC = () => {
       }
       return Array.from(doc.getElementsByTagName('group')).map(node => ({
         id: node.getAttribute('id') || Math.random().toString(),
-        category: (node.getAttribute('category') || 'Gate Network') as Group['category'],
+        category: (node.getAttribute('category') || 'Networks') as Group['category'],
         name: safeText(node, 'name'),
         shortDescription: safeText(node, 'shortDescription'),
         longDescription: safeText(node, 'longDescription'),
@@ -52,7 +52,7 @@ const App: React.FC = () => {
           fetch('./experiences.xml').then(r => r.text()),
         ]);
 
-        const gateNetwork = parseGroupsXml(parser.parseFromString(gateNetworkText, "text/xml"));
+        const gateNetwork = shuffleArray(parseGroupsXml(parser.parseFromString(gateNetworkText, "text/xml")));
         const creators = shuffleArray(parseGroupsXml(parser.parseFromString(creatorsText, "text/xml")));
         const experiences = shuffleArray(parseGroupsXml(parser.parseFromString(experiencesText, "text/xml")));
 
@@ -92,21 +92,7 @@ const App: React.FC = () => {
       <main className="relative z-10 w-full max-w-full px-6 md:px-16 lg:px-32 py-12 md:py-16 lg:py-24 h-screen overflow-y-auto overflow-x-hidden custom-scrollbar">
         
         <header className="mb-20 lg:mb-40 flex flex-col items-start pt-6 md:pt-10">
-          <div className="flex flex-col sm:flex-row sm:items-center gap-4 md:gap-6 mb-8 md:mb-12 w-full">
-            <a
-              href="https://discord.gg/d4fkbpWsGT" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="group flex items-center gap-3 px-5 py-2 md:px-6 md:py-2.5 bg-indigo-600/20 hover:bg-indigo-600 transition-all duration-300 rounded-full border border-indigo-500/30 hover:border-indigo-400 w-fit backdrop-blur-md shadow-lg"
-            >
-              <svg className="w-4 h-4 md:w-5 md:h-5 text-indigo-400 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037 19.736 19.736 0 0 0-4.885 1.515.069.069 0 0 0-.032.027C.533 9.048-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.927 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .077.01 10.255 10.255 0 0 0 .372.292.077.077 0 0 1-.008.128 12.51 12.51 0 0 1-1.872.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993.023.032.063.046.084.028a19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
-              </svg>
-              <span className="text-[10px] md:text-[12px] font-black text-indigo-100 uppercase tracking-widest">Join our Discord</span>
-            </a>
-          </div>
-          
-          <div className="flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-12 lg:gap-16 mt-8">
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-12 lg:gap-16">
             {/* Logo square zone */}
             <div className="w-28 h-28 md:w-44 md:h-44 lg:w-52 lg:h-52 flex items-center justify-center shrink-0">
               <img
@@ -129,6 +115,18 @@ const App: React.FC = () => {
             <span className="text-white text-sm md:text-xl lg:text-3xl font-medium opacity-90 drop-shadow-lg whitespace-nowrap">Crafting an entire universe inside the virtual world since 2005.</span>
             <span className="text-white text-sm md:text-xl lg:text-3xl font-medium opacity-90 drop-shadow-lg whitespace-nowrap">Joining forces as one since 2026.</span>
           </div>
+
+          <a
+            href="https://discord.gg/d4fkbpWsGT"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-6 mt-10 md:mt-14 px-12 py-6 bg-indigo-600/20 hover:bg-indigo-600 transition-all duration-300 rounded-2xl border border-indigo-500/30 hover:border-indigo-400 w-fit backdrop-blur-md shadow-lg"
+          >
+            <svg className="w-10 h-10 text-indigo-400 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037 19.736 19.736 0 0 0-4.885 1.515.069.069 0 0 0-.032.027C.533 9.048-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.927 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .077.01 10.255 10.255 0 0 0 .372.292.077.077 0 0 1-.008.128 12.51 12.51 0 0 1-1.872.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993.023.032.063.046.084.028a19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
+            </svg>
+            <span className="text-xl md:text-2xl font-black text-indigo-100 uppercase tracking-widest">Join our Discord</span>
+          </a>
         </header>
 
         {/* Categorized Sections */}
