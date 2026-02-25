@@ -106,17 +106,17 @@ const App: React.FC = () => {
             </div>
 
             {/* Header Text */}
-            <h1 className="text-6xl sm:text-7xl md:text-[10rem] lg:text-[12rem] font-black text-white tracking-tighter leading-[0.8] drop-shadow-[0_15px_15px_rgba(0,0,0,0.8)] break-words">
+            <h1 className="text-[clamp(3.75rem,12vw,12rem)] font-black text-white tracking-tighter leading-[0.8] drop-shadow-[0_15px_15px_rgba(0,0,0,0.8)] break-words">
               GATE<br />BUILDERS<span className="text-blue-600">.</span>
             </h1>
           </div>
 
-          <p className="text-zinc-400 text-lg md:text-3xl lg:text-5xl max-w-5xl font-light leading-tight drop-shadow-lg mt-12 md:mt-16 whitespace-nowrap">
+          <p className="text-zinc-400 text-[clamp(1.125rem,2.5vw,3rem)] font-light leading-tight drop-shadow-lg mt-12 md:mt-16">
             The beating heart of Second Life's Stargate collective.
           </p>
           <div className="mt-3 md:mt-4 flex flex-col gap-1">
-            <span className="text-white text-sm md:text-xl lg:text-3xl font-medium opacity-90 drop-shadow-lg whitespace-nowrap">Crafting an entire universe inside the virtual world since 2005.</span>
-            <span className="text-white text-sm md:text-xl lg:text-3xl font-medium opacity-90 drop-shadow-lg whitespace-nowrap">Joining forces as one since 2026.</span>
+            <span className="text-white text-sm md:text-xl lg:text-3xl font-medium opacity-90 drop-shadow-lg">Crafting an entire universe inside the virtual world since 2005.</span>
+            <span className="text-white text-sm md:text-xl lg:text-3xl font-medium opacity-90 drop-shadow-lg">Joining forces as one since 2026.</span>
           </div>
 
           <a
