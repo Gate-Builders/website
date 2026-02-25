@@ -25,7 +25,7 @@
     <NOVUM_gateAddress>SGC</NOVUM_gateAddress>
     <imageUrl>./img/controlroom2.jpg</imageUrl>
     <logoUrl>./img/sgc-logo.png</logoUrl>
-    <videoUrl></videoUrl>
+    <videoUrl>./vids/sgc-vid.mp4</videoUrl>
     <websiteUrl>https://sgmu.space/</websiteUrl>
     <location>http://maps.secondlife.com/secondlife/Multiverse/143/197/24</location>
     <tags>
@@ -42,7 +42,7 @@
     <ASN_gateAddress>Abydos</ASN_gateAddress>
     <imageUrl>./img/abydos.jpg</imageUrl>
     <logoUrl>./img/abydos-poo.png</logoUrl>
-    <videoUrl></videoUrl>
+    <videoUrl>./vids/abydos-vid.mp4</videoUrl>
     <websiteUrl>https://sgmu.space/</websiteUrl>
     <location>http://maps.secondlife.com/secondlife/Multiverse/144/221/2193</location>
     <tags>
@@ -58,7 +58,7 @@
     <ASN_gateAddress>Atlantis</ASN_gateAddress>
     <imageUrl>./img/atlantis.jpg</imageUrl>
     <logoUrl>./img/SGA.png</logoUrl>
-    <videoUrl></videoUrl>
+    <videoUrl>./vids/atlantis-vid.mp4</videoUrl>
     <websiteUrl>https://sgmu.space/</websiteUrl>
     <location>http://maps.secondlife.com/secondlife/Multiverse/116/128/2522</location>
     <tags>
@@ -74,7 +74,7 @@
     <NOVUM_gateAddress>Icarus</NOVUM_gateAddress>
     <imageUrl>./img/icarus.jpg</imageUrl>
     <logoUrl>./img/SG-ICARUS-BASE.png</logoUrl>
-    <videoUrl></videoUrl>
+    <videoUrl>./vids/icarus-vid-v3.mp4</videoUrl>
     <websiteUrl>https://sgmu.space/</websiteUrl>
     <location>http://maps.secondlife.com/secondlife/Multiverse/195/79/1552</location>
     <tags>
@@ -91,7 +91,7 @@
     <ASN_gateAddress>Midway</ASN_gateAddress>
     <imageUrl>./img/midway.jpg</imageUrl>
     <logoUrl>./img/midway-logo-2dflat.png</logoUrl>
-    <videoUrl></videoUrl>
+    <videoUrl>./vids/midway-vid.mp4</videoUrl>
     <websiteUrl>https://sgmu.space/</websiteUrl>
     <location>http://maps.secondlife.com/secondlife/Multiverse/40/143/1550</location>
     <tags>
@@ -108,7 +108,7 @@
     <NOVUM_gateAddress>Othala</NOVUM_gateAddress>
     <imageUrl>./img/othala1.png</imageUrl>
     <logoUrl>./img/asgard-head-logo.png</logoUrl>
-    <videoUrl></videoUrl>
+    <videoUrl>./vids/othala-vid.mp4</videoUrl>
     <websiteUrl>https://sgmu.space/</websiteUrl>
     <location>http://maps.secondlife.com/secondlife/Multiverse/128/242/1753</location>
     <tags>
