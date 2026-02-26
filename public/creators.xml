@@ -2,10 +2,11 @@
 <groups>
   <group id="carters" category="Creators">
     <name>Carter's Creations</name>
-    <shortDescription>REDACTED.</shortDescription>
-    <longDescription>REDACTED.</longDescription>
-    <imageUrl>https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&amp;fit=crop&amp;q=80&amp;w=1000</imageUrl>
-    <logoUrl>https://api.dicebear.com/7.x/shapes/svg?seed=oslabs&amp;backgroundColor=3b82f6</logoUrl>
+    <shortDescription>A fusion between Stargate and Star Trek products.</shortDescription>
+    <longDescription>Carter's Creation is born as a fusion between Stargate and Star Trek.
+    Both universe well written but yet not mixed. We're trying to develop products, in partnership of experts, to serve fans of all ages and fantasy.</longDescription>
+    <imageUrl>./img/Carters_Creation_W_Stargate.jpg</imageUrl>
+    <logoUrl>./img/Carters_Creation_LOGO.png</logoUrl>
     <websiteUrl>https://marketplace.secondlife.com/en-US/stores/263991</websiteUrl>
     <location>http://maps.secondlife.com/secondlife/Excession/94/121/79</location>
     <tags>
