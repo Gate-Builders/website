@@ -70,15 +70,4 @@
       <tag>Tools</tag>
     </tags>
   </group>
-  <group id="shadow" category="Creators">
-    <name>Shadow Tech</name>
-    <shortDescription>REDACTED.</shortDescription>
-    <longDescription>REDACTED.</longDescription>
-    <imageUrl>https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&amp;fit=crop&amp;q=80&amp;w=1000</imageUrl>
-    <logoUrl>https://api.dicebear.com/7.x/shapes/svg?seed=oslabs&amp;backgroundColor=3b82f6</logoUrl>
-    <websiteUrl>https://marketplace.secondlife.com/en-US/stores/11390</websiteUrl>
-    <tags>
-      <tag>Gadgets and Tools</tag>
-    </tags>
-  </group>
 </groups>
