@@ -30,4 +30,20 @@
       <tag>Curated</tag>
     </tags>
   </group>
+  <group id="universe-network" category="Networks">
+    <name>Universe Network</name>
+    <shortDescription>An ancient, automated gateway built for deep‑universe exploration far beyond known space.</shortDescription>
+    <longDescription>The Universe Stargate is one of the most fascinating and mysterious artifacts ever created by the Ancients. Unlike the familiar Milky Way and Pegasus gates, this model comes from a much earlier technological era—long before the Stargate design reached its later refinement.
+    That makes the Universe gate not only technically unique, but also historically invaluable.</longDescription>
+    <imageUrl>./img/universe-backg.jpg</imageUrl>
+    <logoUrl>./img/universenet_logo.png</logoUrl>
+    <videoUrl></videoUrl>
+    <websiteUrl>https://mond-keks.de/gatelist/index.php?page=thegate</websiteUrl>
+    <location>http://maps.secondlife.com/secondlife/Eastbridge%20Village/185/61/4002</location>
+    <tags>
+      <tag>Mesh Based Stargate</tag>
+      <tag>Public API</tag>
+      <tag>Galactic</tag>
+    </tags>
+  </group>
 </groups>
